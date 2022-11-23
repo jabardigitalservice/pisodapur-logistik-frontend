@@ -408,7 +408,7 @@ export default {
     setDataInfo() {
       this.infoDetail.push({
         title: 'Tanggal Pengajuan',
-        value: this.formatDatetime(this.detailLogisticRequest?.created_at, 'DD MMMM YYYY') || '-'
+        value: this.formatDatetime(this.detailLogisticRequest?.info?.created_at, 'DD MMMM YYYY') || '-'
       },
       {
         title: 'Status',
@@ -416,11 +416,11 @@ export default {
       },
       {
         title: 'Disetujui oleh',
-        value: this.detailLogisticRequest?.info.approved_by || '-'
+        value: this.detailLogisticRequest?.info?.approved_by || '-'
       },
       {
         title: 'Nomor ID',
-        value: this.detailLogisticRequest?.info.id || '-'
+        value: this.detailLogisticRequest?.info?.id || '-'
       })
     },
     setDataStatus() {
