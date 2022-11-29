@@ -9,15 +9,8 @@ import Layout from '@/layout'
 /* Router Modules */
 import dashboardRouter from './modules/dashboard'
 import pengajuanLogistik from './modules/pengajuanLogistik'
-// temporarily hidden
-// import requestVaccine from './modules/requestVaccine'
-import faskesRouter from './modules/faskes'
 import formPemohonAdmin from './modules/formPemohonAdmin'
-import letterRouter from './modules/letter'
-import reports from './modules/reports'
-// temporarily hidden
-// import allocation from './modules/allocation'
-import otherInstace from './modules/otherInstance'
+
 /* Router Vaccine Modules */
 import immunization from './modules/vaccine/immunization'
 import pharmacy from './modules/vaccine/pharmacy'
@@ -125,14 +118,6 @@ export const asyncRoutes = [
   dashboardRouter,
   formPemohonAdmin,
   pengajuanLogistik,
-  // temporarily hidden
-  // requestVaccine,
-  reports,
-  // temporarily hidden
-  // allocation,
-  letterRouter,
-  faskesRouter,
-  otherInstace,
   immunization,
   pharmacy,
   logisticPost,

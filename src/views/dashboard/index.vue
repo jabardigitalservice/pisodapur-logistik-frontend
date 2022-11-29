@@ -1,5 +1,5 @@
 <template>
-  <div v-if="app === 'vaccine'">
+  <div v-if="true">
     <UnderDevelopment />
   </div>
   <v-container v-else fluid grid-list-xl py-0>

@@ -75,7 +75,7 @@ export default {
     back: 'Kembali',
     close: 'Tutup',
     login_title: 'Selamat datang di Aplikasi',
-    logistik_covid: 'Logistik Covid-19',
+    logistik_covid: 'Pisodapur Logistik',
     form: 'Formulir',
     applicant_code: 'Kode Permohonan',
     login: 'Login',
