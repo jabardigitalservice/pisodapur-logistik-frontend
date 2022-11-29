@@ -1,1 +1,1 @@
-/api/*  http://api-logistik-pisodapur.jabarprov.go.id/:splat  200
+/api/* http://api-logistik-pisodapur.jabarprov.go.id/api/:splat 200!
