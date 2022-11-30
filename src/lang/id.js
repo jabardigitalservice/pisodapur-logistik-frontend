@@ -242,7 +242,7 @@ export default {
     full_address: 'Alamat Lengkap',
     delivery_address: 'Alamat Kirim',
     pharmacy_installation_full_address: 'Alamat Lengkap Instalasi Farmasi/Instansi',
-    example_full_address: 'Masukkan alamat lengkap instansi kesehatan/faskes disertai dengan nomor rumah, RT, RW, dan Kode Pos',
+    example_full_address: 'Masukkan alamat lengkap instansi',
     step_title_1: 'Identitas Instansi Pemohon',
     step_title_2: 'Identitas Pemohon',
     step_title_3: 'Kebutuhan Logistik',

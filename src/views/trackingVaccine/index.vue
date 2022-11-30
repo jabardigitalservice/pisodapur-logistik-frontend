@@ -20,7 +20,7 @@
           <JDSTextField
             v-model="listQuery.search"
             label="ID/No. HP/Email Permohonan"
-            sub-label="*ID permohonan didapatkan setelah anda melakukan permohonan"
+            sub-label="*ID permohonan didapatkan setelah Anda melakukan permohonan"
             placeholder="Tulis ID/No. HP/Email Permohonan"
             :error-messages="errors"
             :hide-details="errors.length === 0"

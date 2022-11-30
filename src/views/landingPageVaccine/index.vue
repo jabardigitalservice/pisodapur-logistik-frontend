@@ -123,7 +123,7 @@ export default {
     onRequest() {
       // Temporary hidden
       // this.showRequirement = true
-      this.$router.push({ path: '/form-pemohon', query: { type: 'vaksin' }})
+      this.$router.push({ path: '/form-pemohon' })
     },
     onTracking() {
       this.$router.push('/tracking-vaccine')
