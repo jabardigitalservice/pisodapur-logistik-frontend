@@ -47,13 +47,14 @@ export const constantRoutes = [
     component: () => import('@/views/login/authredirect'),
     hidden: true
   },
+  // Temporary hidden
+  // {
+  //   path: '/landing-page',
+  //   component: () => import('@/views/landingPage/index'),
+  //   hidden: true
+  // },
   {
     path: '/landing-page',
-    component: () => import('@/views/landingPage/index'),
-    hidden: true
-  },
-  {
-    path: '/landing-page-vaccine',
     component: Layout,
     hidden: true,
     children: [
@@ -62,7 +63,7 @@ export const constantRoutes = [
         component: () => import('@/views/landingPageVaccine/index'),
         hidden: true,
         meta: {
-          title: 'landing_page_vaccine',
+          title: 'landing_page',
           isVaccineContent: true
         }
       }

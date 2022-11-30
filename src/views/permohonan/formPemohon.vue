@@ -134,7 +134,7 @@ export default {
       return this.$route.query.type === 'vaksin'
     },
     landingPage() {
-      return this.$route.query.type === 'vaksin' ? '/landing-page-vaccine' : '/landing-page'
+      return '/landing-page'
     },
     linkTutorial() {
       return this.isVaccineContent

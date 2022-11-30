@@ -42,7 +42,7 @@
           height="42px"
           :width="$vuetify.breakpoint.mdAndUp ? '48%' : '100%'"
           :class="{ 'mt-2': $vuetify.breakpoint.smAndDown }"
-          @click="$router.push('/landing-page-vaccine')"
+          @click="$router.push('/landing-page')"
         >
           Kembali ke Menu Utama
         </JDSButton>
