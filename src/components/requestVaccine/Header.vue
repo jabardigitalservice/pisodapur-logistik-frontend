@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     onInfoClick() {
-      window.open(`https://wa.me/${process.env.VUE_APP_HOTLINE_PIKOBAR_VAKSIN_ANYK}`, '_blank')
+      window.open(`https://wa.me/${process.env.VUE_APP_HOTLINE_PISODAPUR_LOGISTIC}`, '_blank')
     }
   }
 }

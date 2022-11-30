@@ -127,7 +127,7 @@
       class="requirement__btn green-dark white--text py-3 px-6"
       @click="onNext"
     >
-      {{ $t('label.request_vaccine') }}
+      {{ $t('label.request_logistic') }}
       <v-icon
         right
         dark

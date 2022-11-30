@@ -1,15 +1,16 @@
 <template>
-  <div class="d-flex flex-column align-center mt-12">
+  <div class="d-flex flex-column align-center">
     <img
-      src="/img/under-construction.svg"
+      src="/img/logo_pemprov.png"
       alt="under-construction"
-      width="363px"
-      height="229px"
-      class="mb-8"
+      width="250px"
+      height="250px"
+      class="mb-5"
     >
     <h1 class="under-development__text">
-      {{ $t('label.under_development_feature') }}
+      {{ $t('label.welcome') }}
     </h1>
+    <h2 class="under-development__text">Jabar Digital Service</h2>
   </div>
 </template>
 
