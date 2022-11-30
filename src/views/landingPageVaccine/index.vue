@@ -126,7 +126,7 @@ export default {
       this.$router.push({ path: '/form-pemohon' })
     },
     onTracking() {
-      this.$router.push('/tracking-vaccine')
+      this.$router.push('/tracking')
     },
     onShowStock() {
       this.showRequirement = false

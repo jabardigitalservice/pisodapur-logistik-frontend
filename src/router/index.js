@@ -69,18 +69,19 @@ export const constantRoutes = [
       }
     ]
   },
+  // Temporary hidden
+  // {
+  //   path: '/tracking',
+  //   component: () => import('@/views/tracking/index'),
+  //   hidden: true
+  // },
   {
     path: '/tracking',
-    component: () => import('@/views/tracking/index'),
-    hidden: true
-  },
-  {
-    path: '/tracking-vaccine',
     component: () => import('@/views/trackingVaccine/index'),
     hidden: true
   },
   {
-    path: '/tracking-vaccine/:id',
+    path: '/tracking/:id',
     component: () => import('@/views/trackingVaccine/detail/index'),
     hidden: true
   },

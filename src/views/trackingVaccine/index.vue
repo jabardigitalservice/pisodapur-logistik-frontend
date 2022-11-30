@@ -173,7 +173,7 @@ export default {
       }
     },
     onDetail(id) {
-      this.$router.push(`/tracking-vaccine/${id}`)
+      this.$router.push(`/tracking/${id}`)
     },
     async fetchData(isReplaceQuery = false) {
       const res = await this.$store.dispatch('tracking/getTrackingVaccine', this.listQuery)
