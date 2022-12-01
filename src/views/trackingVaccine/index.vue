@@ -167,7 +167,6 @@ export default {
       const isValid = await this.$refs.form.validate()
       if (isValid) {
         this.listQuery.page = 1
-        // await this.fetchData(true)
         this.getDataTracking()
       } else {
         return
@@ -189,16 +188,8 @@ export default {
         })
       }
     },
-    // func tracking alkes
-    async getDataTracking(page) {
-      // const valid = await this.$refs.observer.validate()
-      // if (!valid) {
-      //   return
-      // }
-
-      // this.listQueryTable.page = page ?? this.listQueryTable.page
+    async getDataTracking() {
       const response = await this.$store.dispatch('logistics/getTrackingLogistic', this.listQuery)
-      console.log(response.data.application)
       this.listVaccine = response.data.application
       this.clicked = true
     }
