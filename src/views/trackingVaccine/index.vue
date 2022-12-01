@@ -64,11 +64,11 @@
         <template v-slot:item-prop="{ item, index }">
           <tr>
             <td>{{ getTableRowNumbering(index, listQuery.page, listQuery.limit) }}</td>
-            <td>{{ item?.created_at ? $moment(item.created_at).format('D MMMM YYYY') : '-' }}</td>
-            <td>{{ item?.applicant?.letter?.application_letter_number || '-' }}</td>
-            <td>{{ item?.agency_name || '-' }}</td>
-            <td>{{ item?.master_faskes_type.name || '-' }}</td>
-            <td>{{ item?.applicant.applicant_name || '-' }}</td>
+            <td>{{ item.created_at ? $moment(item.created_at).format('D MMMM YYYY') : '-' }}</td>
+            <td>{{ item.applicant.letter.application_letter_number || '-' }}</td>
+            <td>{{ item.agency_name || '-' }}</td>
+            <td>{{ item.master_faskes_type.name || '-' }}</td>
+            <td>{{ item.applicant.applicant_name || '-' }}</td>
             <td>
               <JDSButton inverted height="25px" @click="onDetail(item.id)">
                 {{ $t('label.detail') }}
