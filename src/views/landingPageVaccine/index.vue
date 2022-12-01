@@ -4,7 +4,7 @@
       <!-- Header -->
       <VaccineHeader />
 
-      <!-- Vaccine Request -->
+      <!-- Logistic Request -->
       <section class="landing-page__main-section py-5">
         <v-row class="align-center">
           <v-col
@@ -32,11 +32,8 @@
                 'text-center': $vuetify.breakpoint.smAndDown
               }"
             >
-              Portal ini berfungsi untuk mendata permohonan vaksin dan logistik pendukung vaksin yang diperuntukkan bagi
-              <strong class="green-dark--text">Dinas Kesehatan, TNI, POLRI</strong>
-              dan
-              <strong class="green-dark--text">Instansi lainnya</strong>
-              yang hendak melakukan vaksinasi.
+              Portal ini berfungsi untuk mendata permohonan logistik yang diperuntukkan bagi
+              <strong class="green-dark--text">korban bencana alam di Kab.Cianjur</strong>
             </p>
             <v-btn
               depressed
@@ -46,7 +43,7 @@
               class="landing-page__btn d-flex green-dark white--text py-3 px-6"
               @click="onRequest"
             >
-              {{ $t('label.request_vaccine') }}
+              {{ $t('label.request_logistic') }}
               <v-icon
                 right
                 dark
@@ -57,9 +54,9 @@
           </v-col>
           <v-col cols="12" sm="12" md="6" class="d-flex justify-center">
             <img
-              width="358px"
-              height="262px"
-              src="/img/icons/vaccination.png"
+              width="450px"
+              height="200px"
+              src="@/static/home_logistik_2.png"
               alt="vaccination"
             >
           </v-col>
@@ -70,11 +67,11 @@
       <section class="landing-page__main-section--grey d-flex flex-row justify-space-between">
         <img src="/img/icons/vaccine-track-left.svg" alt="vaccine track">
         <div class="d-flex flex-column align-center">
-          <span class="landing-page__vaccination-track__title">Lacak Pengajuan Vaksin</span>
+          <span class="landing-page__vaccination-track__title">Lacak Pengajuan Logistik</span>
           <p align="center" class="landing-page__vaccination-track__text">
             Bingung permohonan Anda sudah sampai mana?
             <br>
-            Yuk, cari tahu sejauh mana tahapan permohonan vaksin Anda.
+            Yuk, cari tahu sejauh mana tahapan permohonan logistik Anda.
           </p>
           <v-btn
             depressed
@@ -124,10 +121,12 @@ export default {
   },
   methods: {
     onRequest() {
-      this.showRequirement = true
+      // Temporary hidden
+      // this.showRequirement = true
+      this.$router.push({ path: '/form-pemohon' })
     },
     onTracking() {
-      this.$router.push('/tracking-vaccine')
+      this.$router.push('/tracking')
     },
     onShowStock() {
       this.showRequirement = false

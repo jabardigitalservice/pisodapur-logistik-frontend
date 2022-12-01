@@ -6,7 +6,7 @@
       'footer--small': $vuetify.breakpoint.smAndDown
     }"
   >
-    Copyright © Pikobar Logistik 2022. All rights reserved
+    Copyright © Pisodapur Logistik 2022. All rights reserved
   </div>
 </template>
 

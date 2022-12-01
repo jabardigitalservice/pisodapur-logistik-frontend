@@ -11,7 +11,9 @@
           <li class="alert__text">Kirim surat final Anda melalui <strong>WhatsApp Hotline PIKOBAR ({{ hotlinePikobar }})</strong>.</li>
         </ol>
       </v-alert>
-      <center v-else><v-label class="title"><b>{{ $t('label.applicant_form_header_step_2') }}</b></v-label></center>
+      <div class="text-center my-2">
+        <v-label class="title"><b>{{ $t('label.applicant_form_header_letter') }}</b></v-label>
+      </div>
       <br>
     </div>
     <ValidationObserver ref="observer">

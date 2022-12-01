@@ -106,7 +106,7 @@ export default {
     },
     async onBack() {
       await this.submitFeedbackRating()
-      this.$router.push('/landing-page-vaccine')
+      this.$router.push('/landing-page')
     },
     submitFeedbackRating() {
       if (this.rateValue) {

@@ -22,9 +22,9 @@
             </v-alert>
           </v-col>
         </v-row>
-        <v-row v-else>
-          <center><v-label class="title"><b>{{ $t('label.applicant_form_header_step_2') }}</b></v-label></center>
-        </v-row>
+        <div v-else class="text-center my-2 pb-6">
+          <v-label class="title"><b>{{ $t('label.applicant_form_header_step_2') }}</b></v-label>
+        </div>
         <v-row>
           <v-col cols="12" sm="12" md="6">
             <ValidationProvider

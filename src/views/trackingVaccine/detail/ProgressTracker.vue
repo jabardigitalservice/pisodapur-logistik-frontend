@@ -37,7 +37,7 @@
         height="42px"
         :width="$vuetify.breakpoint.mdAndUp ? '222px' : '100%'"
         :class="{ 'ml-4': $vuetify.breakpoint.mdAndUp }"
-        @click="$router.push('/landing-page-vaccine')"
+        @click="$router.push('/landing-page')"
       >
         Kembali ke Halaman Utama
       </JDSButton>
@@ -59,18 +59,18 @@ export default {
     }
   },
   async mounted() {
-    const res = await this.$store.dispatch('tracking/getTrackingVaccineDetail', this.$route.params.id)
-    const status = res.data.status
+    const res = await this.$store.dispatch('logistics/getTrackingLogistic', { search: this.$route.params.id })
+    const status = res.data.application[0].status_request
     this.currentStep = this.stageDisplay(status)
   },
   methods: {
     stageDisplay(value) {
       switch (value) {
-        case 'not_verified':
+        case 'not_approved-not_verified':
           return 1
-        case 'verified':
+        case 'not_approved-verified':
           return 2
-        case 'approved':
+        case 'approved-verified':
           return 3
         case 'finalized':
           return 4

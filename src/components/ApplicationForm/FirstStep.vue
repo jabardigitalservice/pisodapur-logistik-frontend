@@ -5,9 +5,9 @@
         ref="form"
         lazy-validation
       >
-        <v-row>
-          <center><v-label class="title"><b>{{ $t('label.applicant_form_header') }}</b></v-label></center>
-        </v-row>
+        <div class="text-center my-2 pb-6">
+          <v-label class="title"><b>{{ $t('label.applicant_form_header') }}</b></v-label>
+        </div>
         <v-row>
           <v-col cols="12" sm="12" md="6">
             <ValidationProvider

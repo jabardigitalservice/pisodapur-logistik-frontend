@@ -17,10 +17,10 @@
     >
     <div class="d-flex flex-column align-center justify-center">
       <span class="tracking__vaccination-track__title text-center">
-        Lacak Permohonan Logistik Vaksin
+        Lacak Permohonan Logistik
       </span>
       <p align="center" :class="{ 'tracking__vaccination-track__text': true, 'tracking__vaccination-track__text--large': $vuetify.breakpoint.mdAndUp }">
-        Anda dapat mengetahui status tindak lanjut permohonan vaksin yang telah diajukan melalui Pikobar
+        Anda dapat mengetahui status tindak lanjut permohonan logistik yang telah diajukan melalui aplikasi Pisodapur Logistik
       </p>
     </div>
     <img

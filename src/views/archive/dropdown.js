@@ -40,7 +40,7 @@ export const warrantOptions = [
 export const stageOptions = [
   {
     text: i18n.t('label.dashboard_unverified'),
-    value: 'not_verified'
+    value: 'not_approved-not_verified'
   },
   {
     text: i18n.t('label.dashboard_rejected'),
@@ -48,15 +48,11 @@ export const stageOptions = [
   },
   {
     text: i18n.t('label.recommend'),
-    value: 'verified'
+    value: 'not_approved-verified'
   },
   {
     text: i18n.t('label.realization'),
-    value: 'approved'
-  },
-  {
-    text: i18n.t('label.release_order'),
-    value: 'finalized'
+    value: 'approved-verified'
   },
   {
     text: 'Menunggu konfirmasi',

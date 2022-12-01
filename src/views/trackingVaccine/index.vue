@@ -20,7 +20,7 @@
           <JDSTextField
             v-model="listQuery.search"
             label="ID/No. HP/Email Permohonan"
-            sub-label="*ID permohonan didapatkan setelah anda melakukan permohonan"
+            sub-label="*ID permohonan didapatkan setelah Anda melakukan permohonan"
             placeholder="Tulis ID/No. HP/Email Permohonan"
             :error-messages="errors"
             :hide-details="errors.length === 0"
@@ -42,7 +42,7 @@
           height="42px"
           :width="$vuetify.breakpoint.mdAndUp ? '48%' : '100%'"
           :class="{ 'mt-2': $vuetify.breakpoint.smAndDown }"
-          @click="$router.push('/landing-page-vaccine')"
+          @click="$router.push('/landing-page')"
         >
           Kembali ke Menu Utama
         </JDSButton>
@@ -65,10 +65,10 @@
           <tr>
             <td>{{ getTableRowNumbering(index, listQuery.page, listQuery.limit) }}</td>
             <td>{{ item.created_at ? $moment(item.created_at).format('D MMMM YYYY') : '-' }}</td>
-            <td>{{ item.letter_number || '-' }}</td>
+            <td>{{ item.applicant.letter.application_letter_number || '-' }}</td>
             <td>{{ item.agency_name || '-' }}</td>
-            <td>{{ item.agency_type_name || '-' }}</td>
-            <td>{{ item.applicant_fullname || '-' }}</td>
+            <td>{{ item.master_faskes_type.name || '-' }}</td>
+            <td>{{ item.applicant.applicant_name || '-' }}</td>
             <td>
               <JDSButton inverted height="25px" @click="onDetail(item.id)">
                 {{ $t('label.detail') }}
@@ -99,7 +99,7 @@
         @onNext="fetchData"
       />
     </div>
-    <VaccineFooter />
+    <VaccineFooter class="mt-10" />
   </div>
 </template>
 
@@ -167,13 +167,13 @@ export default {
       const isValid = await this.$refs.form.validate()
       if (isValid) {
         this.listQuery.page = 1
-        await this.fetchData(true)
+        this.getDataTracking()
       } else {
         return
       }
     },
     onDetail(id) {
-      this.$router.push(`/tracking-vaccine/${id}`)
+      this.$router.push(`/tracking/${id}`)
     },
     async fetchData(isReplaceQuery = false) {
       const res = await this.$store.dispatch('tracking/getTrackingVaccine', this.listQuery)
@@ -187,6 +187,11 @@ export default {
           }
         })
       }
+    },
+    async getDataTracking() {
+      const response = await this.$store.dispatch('logistics/getTrackingLogistic', this.listQuery)
+      this.listVaccine = response.data.application
+      this.clicked = true
     }
   }
 }

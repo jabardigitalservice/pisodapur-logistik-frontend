@@ -243,18 +243,26 @@
       @input="onNext"
     />
     <hr>
-    <v-row justify="end">
-      <v-btn class="ml-5 white--text" min-width="140px" color="success" outlined @click="onPrev()">{{ $t('label.back') }}</v-btn>
-      <v-btn class="ml-5 white--text" min-width="140px" color="success" @click="submitData">{{ $t('label.save') }}</v-btn>
+    <v-row justify="end" class="mb-12 mr-1 mt-1">
+      <JDSButton inverted height="42px" @click="onPrev()">
+        {{ $t('label.back') }}
+      </JDSButton>
+      <JDSButton height="42px" class="ml-2" @click="submitData">
+        {{ $t('label.save') }}
+      </JDSButton>
     </v-row>
   </div>
 </template>
 <script>
 import EventBus from '@/utils/eventBus'
+import JDSButton from '@/components/Base/JDSButton'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'TahapKonfirmasiAdmin',
+  components: {
+    JDSButton
+  },
   props: {
     formApplicant: {
       type: Object,
