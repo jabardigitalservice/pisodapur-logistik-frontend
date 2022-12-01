@@ -64,11 +64,11 @@
         <template v-slot:item-prop="{ item, index }">
           <tr>
             <td>{{ getTableRowNumbering(index, listQuery.page, listQuery.limit) }}</td>
-            <td>{{ item.created_at ? $moment(item.created_at).format('D MMMM YYYY') : '-' }}</td>
-            <td>{{ item.letter_number || '-' }}</td>
-            <td>{{ item.agency_name || '-' }}</td>
-            <td>{{ item.agency_type_name || '-' }}</td>
-            <td>{{ item.applicant_fullname || '-' }}</td>
+            <td>{{ item?.created_at ? $moment(item.created_at).format('D MMMM YYYY') : '-' }}</td>
+            <td>{{ item?.applicant?.letter?.application_letter_number || '-' }}</td>
+            <td>{{ item?.agency_name || '-' }}</td>
+            <td>{{ item?.master_faskes_type.name || '-' }}</td>
+            <td>{{ item?.applicant.applicant_name || '-' }}</td>
             <td>
               <JDSButton inverted height="25px" @click="onDetail(item.id)">
                 {{ $t('label.detail') }}
@@ -99,7 +99,7 @@
         @onNext="fetchData"
       />
     </div>
-    <VaccineFooter />
+    <VaccineFooter class="mt-10" />
   </div>
 </template>
 
@@ -167,7 +167,8 @@ export default {
       const isValid = await this.$refs.form.validate()
       if (isValid) {
         this.listQuery.page = 1
-        await this.fetchData(true)
+        // await this.fetchData(true)
+        this.getDataTracking()
       } else {
         return
       }
@@ -187,6 +188,19 @@ export default {
           }
         })
       }
+    },
+    // func tracking alkes
+    async getDataTracking(page) {
+      // const valid = await this.$refs.observer.validate()
+      // if (!valid) {
+      //   return
+      // }
+
+      // this.listQueryTable.page = page ?? this.listQueryTable.page
+      const response = await this.$store.dispatch('logistics/getTrackingLogistic', this.listQuery)
+      console.log(response.data.application)
+      this.listVaccine = response.data.application
+      this.clicked = true
     }
   }
 }

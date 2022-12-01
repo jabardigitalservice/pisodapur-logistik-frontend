@@ -399,7 +399,7 @@ export default {
     loading_step_two: 'Proses mungkin membutuhkan waktu beberapa saat.',
     save_success: 'Data Berhasil Disimpan!',
     vaccine_save_success: 'Data Anda Tersimpan dan Akan Diverifikasi!',
-    loading_done_one: 'Terima kasih telah mengajukan permohonan logistik via PIKOBAR. Data yang diterima selanjutnya akan diverifikasi dan diproses lebih lanjut oleh Divisi Logistik GTPP Covid-19 Jawa Barat. Anda dapat melacak proses permohonan pengajuan logistik Anda via Fitur Lacak Pengajuan Logistik dalam website ini.',
+    loading_done_one: 'Terima kasih telah mengajukan permohonan logistik via Pisodapur. Data yang diterima selanjutnya akan diverifikasi dan diproses lebih lanjut oleh Divisi Logistik Jawa Barat. Anda dapat melacak proses permohonan pengajuan logistik Anda via Fitur Lacak Pengajuan Logistik dalam website ini.',
     loading_done_three: 'Selanjutnya Anda akan dihubungi melalui Email atau No Telp yang telah didaftarkan.',
     add_logistics_label: 'Tambahkan kebutuhan alat kesehatan',
     add_vaccine_label: 'Tambahkan kebutuhan vaksin',

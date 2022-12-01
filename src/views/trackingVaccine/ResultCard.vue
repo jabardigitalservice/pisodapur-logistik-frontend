@@ -6,27 +6,27 @@
     </v-row>
     <v-row>
       <v-col class="result__column result__column--header" cols="6">Tanggal Permohonan</v-col>
-      <v-col class="result__column" cols="6">{{ data.created_at }}</v-col>
+      <v-col class="result__column" cols="6">{{ data?.created_at || '-' }}</v-col>
     </v-row>
     <v-row>
       <v-col class="result__column result__column--header" cols="6">Nomor Surat</v-col>
-      <v-col class="result__column" cols="6">{{ data.letter_number }}</v-col>
+      <v-col class="result__column" cols="6">{{ data?.applicant?.letter?.application_letter_number || '-' }}</v-col>
     </v-row>
     <v-row>
       <v-col class="result__column result__column--header" cols="6">Nama Instansi</v-col>
-      <v-col class="result__column" cols="6">{{ data.agency_name }}</v-col>
+      <v-col class="result__column" cols="6">{{ data?.agency_name || '' }}</v-col>
     </v-row>
     <v-row>
       <v-col class="result__column result__column--header" cols="6">Jenis Instansi</v-col>
-      <v-col class="result__column" cols="6">{{ data.agency_type_name }}</v-col>
+      <v-col class="result__column" cols="6">{{ data?.master_faskes_type?.name || '' }}</v-col>
     </v-row>
     <v-row>
       <v-col class="result__column result__column--header" cols="6">Pemohon</v-col>
-      <v-col class="result__column" cols="6">{{ data.applicant_fullname }}</v-col>
+      <v-col class="result__column" cols="6">{{ data?.applicant?.applicant_name || '' }}</v-col>
     </v-row>
     <v-row>
       <v-col class="result__column result__column--header" cols="6">Aksi</v-col>
-      <v-col class="result__column" cols="6"><JDSButton inverted height="34px" @click="onDetail()">
+      <v-col class="result__column" cols="6"><JDSButton inverted height="34px" @click="onDetail(data.id)">
         {{ $t('label.detail') }}
       </JDSButton></v-col>
     </v-row>
@@ -50,8 +50,8 @@ export default {
     }
   },
   methods: {
-    onDetail() {
-      // @todo: create onDetail
+    onDetail(id) {
+      this.$router.push(`/tracking/${id}`)
     }
   }
 }
