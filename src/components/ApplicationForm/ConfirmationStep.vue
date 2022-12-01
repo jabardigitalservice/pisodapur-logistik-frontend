@@ -19,36 +19,17 @@
               </router-link>
             </v-row>
           </v-col>
-          <v-col cols="12" md="4" xs="12">
-            <v-row class="float-right-landing-page">
-              <a :href="linkTutorial" target="_blank"><v-icon color="white" size="25">{{ $t('label.icon_help') }}</v-icon></a>
-              <a :href="linkTutorial" target="_blank"><div class="tutorial-class-form-pemohon pusat-bantuan-landing-page">{{ $t('label.tutorial') }}</div></a>
-            </v-row>
-          </v-col>
         </v-row>
       </div>
       <div class="header-landing-page-mobile">
-        <v-row>
-          <v-col cols="8">
-            <v-row>
-              <v-col class="margin-left-20" cols="2">
-                <img height="40" src="../../static/logistik_logo_lingkar.svg">
-              </v-col>
-              <v-col cols="6">
-                <div class="title-page-landing-page-mobile">
-                  {{ $t('label.logistic') }} <br>
-                  {{ $t('label.medical_tools') }}
-                </div>
-              </v-col>
-            </v-row>
-          </v-col>
-          <v-col cols="4">
-            <v-row class="float-right-landing-page">
-              <v-icon class="margin-20-data-confirmation" color="white" size="30">{{ $t('label.icon_talk') }}</v-icon>
-              <v-icon color="white" size="30">{{ $t('label.icon_help') }}</v-icon>
-            </v-row>
-          </v-col>
-        </v-row>
+        <div class="d-flex flex-row align-center justify-space-between py-3">
+          <div class="d-flex flex-row align-center">
+            <img height="40" src="../../static/logistik_logo_lingkar.svg">
+            <div class="title-page-landing-page-mobile ml-4 pt-0">
+              {{ $t('label.applicant_med_form_title') }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="negative-landing-page main-page-data-confirmation">
@@ -347,28 +328,16 @@
         </div>
       </v-card>
     </div>
-    <div class="full-landing-page main-page-mobile-data-confirmation ">
-      <div class="header-landing-page-mobile">
-        <v-row>
-          <v-col cols="8">
-            <v-row>
-              <v-col class="margin-left-20" cols="2">
-                <img height="40" src="../../static/logistik_logo_lingkar.svg">
-              </v-col>
-              <v-col cols="6">
-                <div class="title-page-landing-page-mobile margin-left-title-mobile-landing-page">
-                  {{ $t('label.logistic') }} <br>
-                  {{ $t('label.medical_tools') }}
-                </div>
-              </v-col>
-            </v-row>
-          </v-col>
-          <v-col cols="4">
-            <v-row class="float-right-landing-page">
-              <a :href="linkTutorial" target="_blank" class="margin-icon-talk-mobile-landing-page"><v-icon color="white" size="25">{{ $t('label.icon_help') }}</v-icon></a>
-            </v-row>
-          </v-col>
-        </v-row>
+    <div class="full-landing-page main-page-mobile-data-confirmation">
+      <div class="ml-10 mb-3">
+        <div class="d-flex flex-row align-center justify-space-between py-3">
+          <div class="d-flex flex-row align-center">
+            <img height="40" src="../../static/logistik_logo_lingkar.svg">
+            <div class="title-page-landing-page-mobile ml-4 pt-0">
+              {{ $t('label.applicant_med_form_title') }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="main-page-mobile-data-confirmation bg-mobile-data-confirmation">
@@ -678,11 +647,6 @@ export default {
     },
     landingPage() {
       return '/landing-page'
-    },
-    linkTutorial() {
-      return this.isVaccineContent
-        ? 'https://bit.ly/PanduanPemohonVaksin'
-        : this.$t('label.link_tutorial')
     }
   },
   mounted() {
